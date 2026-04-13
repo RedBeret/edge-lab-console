@@ -386,6 +386,24 @@ button {
   border-radius: 28px;
 }
 
+.run-list-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 0 4px;
+}
+
+.run-count {
+  font-size: 13px;
+  color: #87a6ab;
+}
+
+.run-count--loading {
+  opacity: 0.5;
+}
+
 .run-row {
   width: 100%;
   border: 1px solid transparent;
