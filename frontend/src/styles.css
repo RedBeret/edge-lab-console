@@ -321,6 +321,34 @@ button {
   font-size: 0.95rem;
 }
 
+.search-wrap {
+  position: relative;
+}
+
+.search-wrap input {
+  padding-right: 40px;
+}
+
+.search-clear {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #87a6ab;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+}
+
+.search-clear:hover {
+  color: #f0fbfc;
+}
+
 .controls-grid input,
 .controls-grid select,
 .note-form input,
