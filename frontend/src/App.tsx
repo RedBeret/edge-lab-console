@@ -183,12 +183,24 @@ export default function App() {
           <div className="controls-grid">
             <label>
               Search
-              <input
-                type="search"
-                value={search}
-                onChange={(event) => setSearch(event.target.value)}
-                placeholder="Search by run, platform, or summary"
-              />
+              <div className="search-wrap">
+                <input
+                  type="search"
+                  value={search}
+                  onChange={(event) => setSearch(event.target.value)}
+                  placeholder="Search by run, platform, or summary"
+                />
+                {search ? (
+                  <button
+                    className="search-clear"
+                    onClick={() => setSearch("")}
+                    type="button"
+                    aria-label="Clear search"
+                  >
+                    ×
+                  </button>
+                ) : null}
+              </div>
             </label>
 
             <label>
