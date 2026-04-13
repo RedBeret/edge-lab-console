@@ -243,7 +243,16 @@ export default function App() {
 
         <section className="workspace-grid">
           <div className="workspace-grid__left">
-            {loadingRuns ? <p className="loading-state">Loading runs...</p> : null}
+            <div className="run-list-header">
+              <p className="panel-kicker">Runs</p>
+              {!loadingRuns ? (
+                <span className="run-count">
+                  {runs.length} {runs.length === 1 ? "result" : "results"}
+                </span>
+              ) : (
+                <span className="run-count run-count--loading">Loading...</span>
+              )}
+            </div>
             <RunTable
               runs={runs}
               selectedRunId={selectedRunId}
